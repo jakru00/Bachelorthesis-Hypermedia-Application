@@ -51,7 +51,7 @@ var createRel = {
                 name: "sex",
                 type: "select",
                 readOnly: false, 
-                prompt: "In treatment:",
+                prompt: "Sex:",
                 placeholder: "Select Sex",
                 options: {
                     inline: [{
@@ -65,9 +65,14 @@ var createRel = {
                     {
                         prompt: "diverse",
                         value: "d"
-                    }],
-                    selectedValues: []
+                    }]
                 }
+            },
+            {
+                name: "in-treatment",
+                type: "checkbox",
+                readOnly: true, 
+                prompt: "In treatment:",
             }]
         }
     }
