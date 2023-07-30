@@ -1,8 +1,12 @@
 const express = require("express");
+const cors = require("cors");
 
 const app = express();
 
+app.use(cors())
+
 app.get("/", function (req, res) {
+    res.set('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.json(object);
 });
 
