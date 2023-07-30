@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Service } from './service';
-import { Thomas } from './thomas-interface';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
+import { HalFormsDocument } from './hal-forms-document-interface';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +10,13 @@ import { Observable, of } from 'rxjs';
 })
 export class AppComponent implements OnInit {
 
-  serverJson$: Observable<Thomas> | undefined;
+  createTemplate$: Observable<HalFormsDocument> | undefined;
   title = "Hypermedia-Application";
   
   constructor (private service: Service) { }
   
   ngOnInit(): void {
-    this.serverJson$ = this.service.get();
+    this.createTemplate$ = this.service.getCreateTemplate();
+    console.log(this.createTemplate$);
   }
 }

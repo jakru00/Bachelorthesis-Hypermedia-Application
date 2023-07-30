@@ -1,4 +1,4 @@
 <p>test</p>
-<div *ngIf="serverJson$ | async as serverJson">
-    <p>{{ serverJson.name }}{{ serverJson.age }}</p>
+<div *ngIf="createTemplate$ | async as createTemplate">
+    <p>{{ createTemplate._templates.default.method }}</p>
 </div>
