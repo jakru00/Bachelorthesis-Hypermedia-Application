@@ -42,16 +42,32 @@ var createRel = {
             },
             {
                 name: "age",
-                type: "text",
+                type: "number",
                 readOnly: false, 
                 prompt: "Age:",
                 placeholder: "Insert Age",
             },
             {
-                name: "in-treatment",
-                type: "checkbox",
+                name: "sex",
+                type: "select",
                 readOnly: false, 
                 prompt: "In treatment:",
+                placeholder: "Select Sex",
+                options: {
+                    inline: [{
+                        prompt: "female",
+                        value: "f"
+                    },
+                    {
+                        prompt: "male",
+                        value: "m"
+                    },
+                    {
+                        prompt: "diverse",
+                        value: "d"
+                    }],
+                    selectedValues: []
+                }
             }]
         }
     }

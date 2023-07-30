@@ -1,14 +1,7 @@
 export interface HalFormsDocument {
-    _links?: {
-        self: LinkObject
-    },
     _templates: {
         default: Template
     }
-}
-
-interface LinkObject {
-    href: string
 }
 
 interface Template {
@@ -20,8 +13,19 @@ interface Template {
 
 interface Property {
     name: string,
-    type?: string,
-    readOnly?: boolean,
-    prompt?: string,
-    placeholder?: string
+    type: string,
+    readOnly: boolean,
+    prompt: string,
+    placeholder?: string,
+    options?: Options
+}
+
+interface Options {
+    inline: Inline[],
+    selectedValues?: string[]
+}
+
+interface Inline {
+    prompt: any,
+    value: any
 }

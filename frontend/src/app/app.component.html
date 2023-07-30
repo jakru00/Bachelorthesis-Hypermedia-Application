@@ -1,4 +1,6 @@
-<p>test</p>
 <div *ngIf="createTemplate$ | async as createTemplate">
-    <p>{{ createTemplate._templates.default.method }}</p>
+    <input type="text">
+    <input type="number">
+    <input type="checkbox">
+    <p>{{ createTemplate._templates.default.properties![2].options!.inline![1].prompt }}</p>
 </div>
