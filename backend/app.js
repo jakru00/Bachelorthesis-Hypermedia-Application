@@ -14,32 +14,31 @@ app.listen(3000, function () {
     console.log("Server is running on localhost3000");
 });
 
-
 var createRel = {
     _links: {
         self: { "href": "http://localhost:3000/rels/patients/create" }
     },
     _templates: {
         default: {
-            method: "POST", // crudlq
+            method: "POST",
             properties: [{
                 name: "name",
                 type: "text",
-                readOnly: false, 
+                readOnly: false,
                 prompt: "Name:",
                 placeholder: "Insert Name",
             },
             {
                 name: "age",
                 type: "number",
-                readOnly: false, 
+                readOnly: false,
                 prompt: "Age:",
                 placeholder: "Insert Age",
             },
             {
                 name: "sex",
                 type: "select",
-                readOnly: false, 
+                readOnly: false,
                 prompt: "Sex:",
                 placeholder: "Select Sex",
                 options: {
@@ -60,11 +59,9 @@ var createRel = {
             {
                 name: "in-treatment",
                 type: "checkbox",
-                readOnly: true, 
+                readOnly: true,
                 prompt: "In treatment:",
             }]
         }
     }
 }
-
-// https://stackoverflow.com/questions/19696240/proper-way-to-return-json-using-node-or-express
