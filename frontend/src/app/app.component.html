@@ -10,7 +10,7 @@
             </div>
             <div *ngIf="property.type=='number'" class="input">
                 <label for="number">{{ property.prompt }}</label><br>
-                <input type="number" placeholder="{{ property.placeholder }}" [disabled]="property.readOnly" [required]="property.required" [min]="property.min" [max]="property.max" id="number"><br>
+                <input type="number" placeholder="{{ property.placeholder }}" [disabled]="property.readOnly" [required]="property.required" [min]="property.min" [max]="property.max" [step]="property.step" id="number"><br>
             </div>
             <div *ngIf="property.type=='select'" class="input">
                 <label for="select">{{ property.prompt }}</label><br>

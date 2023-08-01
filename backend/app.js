@@ -39,7 +39,8 @@ var createRel = {
                 prompt: "Age:",
                 placeholder: "Insert Age",
                 min: 0,
-                max: 150
+                max: 150,
+                step: 1
             },
             {
                 name: "sex",

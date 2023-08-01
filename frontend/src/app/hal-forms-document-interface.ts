@@ -18,6 +18,7 @@ interface Property {
     placeholder?: string,
     min: number,
     max: number,
+    step: number,
     minLength: number,
     maxLength: number,
     options?: Options
