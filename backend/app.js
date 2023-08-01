@@ -5,11 +5,6 @@ const app = express();
 
 app.use(cors())
 
-app.get("/", function (req, res) {
-    res.set('Access-Control-Allow-Origin', 'http://localhost:4200');
-    res.json(thomas);
-});
-
 app.get("/rels/patients/create", function (req, res) {
     res.set('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.json(createRel);
@@ -19,10 +14,6 @@ app.listen(3000, function () {
     console.log("Server is running on localhost3000");
 });
 
-var thomas = {
-    name: "Thomas",
-    age: 23
-}
 
 var createRel = {
     _links: {
@@ -31,8 +22,6 @@ var createRel = {
     _templates: {
         default: {
             method: "POST", // crudlq
-            target: "/patients", // crudlq
-            contentType: "application/json", // crudlq
             properties: [{
                 name: "name",
                 type: "text",

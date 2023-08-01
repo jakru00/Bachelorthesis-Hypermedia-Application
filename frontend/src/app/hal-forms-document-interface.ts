@@ -6,8 +6,6 @@ export interface HalFormsDocument {
 
 interface Template {
     method: string,
-    target?: string,
-    contentType?: string,
     properties: Property[]
 }
 
