@@ -1,23 +1,28 @@
-<form *ngIf="createTemplate$ | async as createTemplate">
-    <ng-container *ngFor="let property of createTemplate._templates.default.properties">
-        <ng-container *ngIf="property.type=='text'">
-            <label for="text">{{ property.prompt }}</label><br>
-            <input type="text" placeholder="{{ property.placeholder }}" [disabled]="property.readOnly" id="text"><br>
+<div class="header">
+    <h1>Hypermedia-Application</h1>
+</div>
+<div class="form">
+    <form *ngIf="createTemplate$ | async as createTemplate">
+        <ng-container *ngFor="let property of createTemplate._templates.default.properties">
+            <div *ngIf="property.type=='text'" class="input">
+                <label for="text">{{ property.prompt }}</label><br>
+                <input type="text" placeholder="{{ property.placeholder }}" [disabled]="property.readOnly" id="text"><br>
+            </div>
+            <div *ngIf="property.type=='number'" class="input">
+                <label for="number">{{ property.prompt }}</label><br>
+                <input type="number" placeholder="{{ property.placeholder }}" [disabled]="property.readOnly" id="number"><br>
+            </div>
+            <div *ngIf="property.type=='select'" class="input">
+                <label for="select">{{ property.prompt }}</label><br>
+                <select id="select" [disabled]="property.readOnly">
+                    <option selected disabled>{{ property.placeholder }}</option>
+                    <option *ngFor="let option of property.options!.inline">{{ option.prompt }}</option>
+                </select><br>
+            </div>
+            <div *ngIf="property.type=='checkbox'" class="input">
+                <label for="checkbox">{{ property.prompt }}</label><br>
+                <input type="checkbox" [disabled]="property.readOnly" id="checkbox">
+            </div>
         </ng-container>
-        <ng-container *ngIf="property.type=='number'">
-            <label for="number">{{ property.prompt }}</label><br>
-            <input type="number" placeholder="{{ property.placeholder }}" [disabled]="property.readOnly" id="number"><br>
-        </ng-container>
-        <ng-container *ngIf="property.type=='select'">
-            <label for="select">{{ property.prompt }}</label><br>
-            <select id="select" [disabled]="property.readOnly">
-                <option selected disabled>{{ property.placeholder }}</option>
-                <option *ngFor="let option of property.options!.inline">{{ option.prompt }}</option>
-            </select><br>
-        </ng-container>
-        <ng-container *ngIf="property.type=='checkbox'">
-            <label for="checkbox">{{ property.prompt }}</label><br>
-            <input type="checkbox" [disabled]="property.readOnly" id="checkbox"><br>
-        </ng-container>
-    </ng-container>
-</form>
+    </form>
+</div>
