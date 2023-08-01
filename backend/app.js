@@ -36,6 +36,8 @@ var createRel = {
                 readOnly: false,
                 prompt: "Age:",
                 placeholder: "Insert Age",
+                min: 0,
+                max: 150
             },
             {
                 name: "sex",

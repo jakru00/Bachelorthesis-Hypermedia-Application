@@ -16,6 +16,8 @@ interface Property {
     readOnly: boolean,
     prompt: string,
     placeholder?: string,
+    min: number,
+    max: number,
     options?: Options
 }
 
