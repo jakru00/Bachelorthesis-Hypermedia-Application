@@ -6,11 +6,11 @@
         <ng-container *ngFor="let property of createTemplate._templates.default.properties">
             <div *ngIf="property.type=='text'" class="input">
                 <label for="text">{{ property.prompt }}</label><br>
-                <input type="text" placeholder="{{ property.placeholder }}" [disabled]="property.readOnly" id="text"><br>
+                <input type="text" placeholder="{{ property.placeholder }}" [disabled]="property.readOnly" [required]="property.required" id="text"><br>
             </div>
             <div *ngIf="property.type=='number'" class="input">
                 <label for="number">{{ property.prompt }}</label><br>
-                <input type="number" placeholder="{{ property.placeholder }}" [disabled]="property.readOnly" id="number"><br>
+                <input type="number" placeholder="{{ property.placeholder }}" [disabled]="property.readOnly" [required]="property.required" id="number"><br>
             </div>
             <div *ngIf="property.type=='select'" class="input">
                 <label for="select">{{ property.prompt }}</label><br>

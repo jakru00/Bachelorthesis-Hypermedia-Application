@@ -24,6 +24,7 @@ var createRel = {
             properties: [{
                 name: "name",
                 type: "text",
+                required: true,
                 readOnly: false,
                 prompt: "Name:",
                 placeholder: "Insert Name",
@@ -31,6 +32,7 @@ var createRel = {
             {
                 name: "age",
                 type: "number",
+                required: true,
                 readOnly: false,
                 prompt: "Age:",
                 placeholder: "Insert Age",
@@ -38,6 +40,7 @@ var createRel = {
             {
                 name: "sex",
                 type: "select",
+                required: false,
                 readOnly: false,
                 prompt: "Sex:",
                 placeholder: "Select Sex",

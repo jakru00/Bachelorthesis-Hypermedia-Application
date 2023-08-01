@@ -12,6 +12,7 @@ interface Template {
 interface Property {
     name: string,
     type: string,
+    required: boolean,
     readOnly: boolean,
     prompt: string,
     placeholder?: string,

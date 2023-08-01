@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Thomas } from './thomas-interface';
 import { Observable } from 'rxjs';
 import { HalFormsDocument } from './hal-forms-document-interface';
 
