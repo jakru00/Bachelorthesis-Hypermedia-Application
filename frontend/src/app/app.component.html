@@ -6,7 +6,7 @@
         <ng-container *ngFor="let property of createTemplate._templates.default.properties">
             <div *ngIf="property.type=='text'" class="input">
                 <label for="text">{{ property.prompt }}</label><br>
-                <input type="text" placeholder="{{ property.placeholder }}" [disabled]="property.readOnly" [required]="property.required" id="text"><br>
+                <input type="text" placeholder="{{ property.placeholder }}" [disabled]="property.readOnly" [required]="property.required" [minLength]="property.minLength" [maxLength]="property.maxLength" id="text"><br>
             </div>
             <div *ngIf="property.type=='number'" class="input">
                 <label for="number">{{ property.prompt }}</label><br>

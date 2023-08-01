@@ -28,6 +28,8 @@ var createRel = {
                 readOnly: false,
                 prompt: "Name:",
                 placeholder: "Insert Name",
+                minLength: 3,
+                maxLength: 20
             },
             {
                 name: "age",
