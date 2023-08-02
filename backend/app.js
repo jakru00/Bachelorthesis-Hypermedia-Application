@@ -42,7 +42,7 @@ var createRel = {
             {
                 name: "sex",
                 type: "select",
-                required: false,
+                required: true,
                 readOnly: false,
                 prompt: "Sex:",
                 placeholder: "Select Sex",

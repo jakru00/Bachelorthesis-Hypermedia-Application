@@ -18,7 +18,7 @@
             </div>
             <div *ngIf="property.type=='select'" class="input">
                 <label for="select">{{ property.prompt }}</label><br>
-                <select id="select" [disabled]="property.readOnly">
+                <select id="select" [disabled]="property.readOnly" [required]="property.required">
                     <option selected disabled>{{ property.placeholder }}</option>
                     <option *ngFor="let option of property.options!.inline">{{ option.prompt }}</option>
                 </select><br>
