@@ -12,11 +12,11 @@ export class AppComponent implements OnInit {
 
   createTemplate$: Observable<HalFormsDocument> | undefined;
   title = "Hypermedia-Application";
-  
-  constructor (private service: Service) { }
-  
+
+  constructor(private _service: Service) { }
+
   ngOnInit(): void {
-    this.createTemplate$ = this.service.getCreateTemplate();
+    this.createTemplate$ = this._service.getCreateTemplate();
     console.log(this.createTemplate$);
   }
 }
