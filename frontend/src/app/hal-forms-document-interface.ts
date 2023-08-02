@@ -15,7 +15,7 @@ interface Property {
     required: boolean,
     readOnly: boolean,
     prompt: string,
-    placeholder?: string,
+    placeholder: string,
     min: number,
     max: number,
     step: number,
