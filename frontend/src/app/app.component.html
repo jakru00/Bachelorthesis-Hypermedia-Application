@@ -8,20 +8,20 @@
                 <label for="text">{{ property.prompt }}</label><br>
                 <input type="text" placeholder="{{ property.placeholder }}" [disabled]="property.readOnly"
                     [required]="property.required" [minLength]="property.minLength" [maxLength]="property.maxLength"
-                    id="text"><br>
+                    id="text">
             </div>
             <div *ngIf="property.type=='number'" class="input">
                 <label for="number">{{ property.prompt }}</label><br>
                 <input type="number" placeholder="{{ property.placeholder }}" [disabled]="property.readOnly"
                     [required]="property.required" [min]="property.min" [max]="property.max" [step]="property.step"
-                    id="number"><br>
+                    id="number">
             </div>
             <div *ngIf="property.type=='select'" class="input">
                 <label for="select">{{ property.prompt }}</label><br>
-                <select id="select" [disabled]="property.readOnly">
+                <select id="select" [disabled]="property.readOnly" [required]="property.required">
                     <option selected disabled>{{ property.placeholder }}</option>
-                    <option *ngFor="let option of property.options!.inline">{{ option.prompt }}</option>
-                </select><br>
+                    <option *ngFor="let option of property.options.inline">{{ option.prompt }}</option>
+                </select>
             </div>
             <div *ngIf="property.type=='checkbox'" class="input">
                 <label for="checkbox">{{ property.prompt }}</label><br>

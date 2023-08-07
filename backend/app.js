@@ -15,9 +15,6 @@ app.listen(3000, function () {
 });
 
 var createRel = {
-    _links: {
-        self: { "href": "http://localhost:3000/rels/patients/create" }
-    },
     _templates: {
         default: {
             method: "POST",
@@ -45,7 +42,7 @@ var createRel = {
             {
                 name: "sex",
                 type: "select",
-                required: false,
+                required: true,
                 readOnly: false,
                 prompt: "Sex:",
                 placeholder: "Select Sex",
